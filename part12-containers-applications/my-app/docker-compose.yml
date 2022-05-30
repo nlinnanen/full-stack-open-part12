@@ -1,0 +1,19 @@
+services:
+  frontend-prod:
+    image: front-prod
+    build:
+      context: ./frontend # The context will pick this directory as the "build context"
+      dockerfile: Dockerfile # This will simply tell which dockerfile to read
+    ports:
+      - 3002:3000
+    container_name: front-prod # This will name the container
+  backend-prod:
+    image: express-server-prod
+    build:
+      context: ./backend # The context will pick this directory as the "build context"
+      dockerfile: Dockerfile # This will simply tell which dockerfile to read
+    ports:
+      - 3210:3001
+    container_name: back-prod # This will name the container
+    depends_on:
+      - frontend-prod

@@ -1,0 +1,35 @@
+body {
+  background-color: #002851;
+  color: white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+time {
+  font-size: 30rem;
+  font-weight: 500;
+}
+
+.text {
+  display: block;
+  margin: auto;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 1000;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .time {
+    font-size: 15vw;
+  }
+  
+  .text {
+    font-size: 12vw;
+  }
+}
